@@ -1,0 +1,24 @@
+{
+  "name": "pinterest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --experimental-loader=extensionless server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "extensionless": "^1.9.9",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.10.1"
+  }
+}
