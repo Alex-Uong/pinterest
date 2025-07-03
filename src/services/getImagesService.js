@@ -25,7 +25,6 @@ const getImagesService = {
       if (typeof value === "string") {
         filters[key] = {
           contains: value,
-          mode: "insensitive",
         };
       }
     });
