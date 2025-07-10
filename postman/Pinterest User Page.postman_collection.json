@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "dcadb37d-a25f-450c-a9e3-5c752baf161b",
+		"name": "Pinterest User Page",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40272045"
+	},
+	"item": [
+		{
+			"name": "Get User Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{pinterest}}user/4",
+					"host": [
+						"{{pinterest}}user"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Saved",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{pinterest}}user/2/saved",
+					"host": [
+						"{{pinterest}}user"
+					],
+					"path": [
+						"2",
+						"saved"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Created",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{pinterest}}user/1/created",
+					"host": [
+						"{{pinterest}}user"
+					],
+					"path": [
+						"1",
+						"created"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{pinterest}}user/images/2",
+					"host": [
+						"{{pinterest}}user"
+					],
+					"path": [
+						"images",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

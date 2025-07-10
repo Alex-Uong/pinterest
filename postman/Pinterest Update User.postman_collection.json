@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "03f2ea99-8e0b-4770-948a-caf94b983a62",
+		"name": "Pinterest Update User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40272045"
+	},
+	"item": [
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ho_ten\": \"Nguyễn Văn A\",\n  \"tuoi\": 28,\n  \"anh_dai_dien\": \"/uploads/avatar-new.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{pinterest}}update-user/me",
+					"host": [
+						"{{pinterest}}update-user"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

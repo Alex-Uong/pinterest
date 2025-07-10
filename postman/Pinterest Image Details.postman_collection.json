@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f13b2779-8c86-4408-972e-46aa5bc1f846",
+		"name": "Pinterest Image Details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40272045"
+	},
+	"item": [
+		{
+			"name": "Get Image Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"uongquocai11@gmail.com\",\n    \"password\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "{{pinterest}}detail/1",
+					"host": [
+						"{{pinterest}}detail"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image Comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"uongquocai11@gmail.com\",\n    \"password\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "{{pinterest}}detail/1/comments",
+					"host": [
+						"{{pinterest}}detail"
+					],
+					"path": [
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"noi_dung\": \"Bức này đẹp quá!\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{pinterest}}detail/1/comments",
+					"host": [
+						"{{pinterest}}detail"
+					],
+					"path": [
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Saved",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"uongquocai11@gmail.com\",\n    \"password\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "{{pinterest}}detail/1/saved",
+					"host": [
+						"{{pinterest}}detail"
+					],
+					"path": [
+						"1",
+						"saved"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

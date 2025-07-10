@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "334724e8-c21d-4ba0-84eb-85993db8c9a7",
+		"name": "Pinterest Add Image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40272045"
+	},
+	"item": [
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/aiuong/Documents/Đăng tin/Iris bán lại/db78426cd759e1bc203b0b990c402683.jpg"
+						},
+						{
+							"key": "ten_hinh",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "mo_ta",
+							"value": "ok test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{pinterest}}add-image",
+					"host": [
+						"{{pinterest}}add-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
